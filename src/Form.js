@@ -38,14 +38,14 @@ export default function SearchEngine() {
         <input type="Submit" value="Search" />
       </form>
       {results && (
-        <ul className="currentWeather">
+        <ul className="current-weather">
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>
           <li>Wind: {Math.round(weather.wind)} km/h</li>
-          <li>
+          <div className="current-weather-icon">
             <img src={weather.icon} alt="weather icon" />
-          </li>
+          </div>
         </ul>
       )}
     </div>

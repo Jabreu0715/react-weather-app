@@ -17,3 +17,10 @@ li {
   list-style-type: none;
   text-align: left;
 }
+.current-weather li {
+  display: flex;
+}
+current-weather-icon {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
