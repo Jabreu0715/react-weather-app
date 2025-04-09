@@ -20,19 +20,13 @@
   font-size: 20px;
   text-align: center;
 }
-li {
-  list-style-type: none;
-  text-align: center;
-}
+
 .container {
   background-color: rgb(219, 216, 216);
   border: 1px solid grey;
   border-radius: 10px;
   margin: 40px auto;
   max-width: 680px;
-  display: grid;
-  grid-template-columns: 3fr 3fr;
-  grid-gap: 5px;
 }
 .searchBar {
   width: 200px;
@@ -44,4 +38,28 @@ li {
   font-size: 14px;
   height: 30px;
   border-radius: 5px;
+}
+.currentWeather li {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.currentWeatherIcon {
+  position: relative;
+  top: -80px;
+  right: -120px;
+}
+.weatherCard {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 10px;
+  width: 80px;
+  padding: 10px;
+}
+.forecastList ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
