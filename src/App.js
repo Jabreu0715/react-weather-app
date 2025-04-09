@@ -1,5 +1,6 @@
 import "./App.css";
 import Form from "./Form";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <h1>Weather App</h1>
       </header>
       <Form />
+      <Footer />
     </div>
   );
 }

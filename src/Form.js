@@ -11,18 +11,18 @@ export default function SearchEngine() {
   function showWeather(response) {
     setResults(true);
     setWeather({
-      temperature: response.data.daily.temperature.day,
-      wind: response.data.daily.wind.speed,
-      humidity: response.data.daily.temperature.humidity,
-      description: response.data.daily.condition.description,
-      icon: response.data.daily.condition.icon_url,
+      temperature: response.data.temperature.current,
+      wind: response.data.wind.speed,
+      humidity: response.data.temperature.humidity,
+      description: response.data.condition.description,
+      icon: response.data.condition.icon_url,
     });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     let apiKey = "23ftbd4aecd5fa6f4304ea2800dofdbf";
-    let url = `https://api.shecodes.io/weather/v1/forecast?/query=${city}&key=${apiKey}`;
+    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}=metric`;
     axios.get(url).then(showWeather);
   }
   function updateCity(event) {
