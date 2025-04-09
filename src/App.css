@@ -1,8 +1,15 @@
+.App {
+  border: 1px solid grey;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 20px auto;
+}
 .App-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 32px;
   color: rgb(3, 78, 136);
 }
 .App-link {
@@ -15,12 +22,26 @@
 }
 li {
   list-style-type: none;
-  text-align: left;
+  text-align: center;
 }
-.current-weather li {
-  display: flex;
-}
-current-weather-icon {
+.container {
+  background-color: rgb(219, 216, 216);
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 680px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 3fr;
+  grid-gap: 5px;
+}
+.searchBar {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: grey;
+}
+.submitButton {
+  font-size: 14px;
+  height: 30px;
+  border-radius: 5px;
 }

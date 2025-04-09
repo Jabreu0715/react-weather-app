@@ -30,23 +30,28 @@ export default function SearchEngine() {
     <div className="Form">
       <form onSubmit={handleSubmit}>
         <input
+          className="searchBar"
           type="Search"
           placeholder="Enter City"
           autoFocus="false"
           onChange={updateCity}
         />
-        <input type="Submit" value="Search" />
+        <input className="submitButton" type="Submit" value="Search" />
       </form>
       {results && (
-        <ul className="current-weather">
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {Math.round(weather.wind)} km/h</li>
-          <div className="current-weather-icon">
+        <div className="container">
+          <ul>
+            <div className="currentWeather">
+              <li>Temperature: {Math.round(weather.temperature)}°C</li>
+              <li>Description: {weather.description}</li>
+              <li>Humidity: {weather.humidity}%</li>
+              <li>Wind: {Math.round(weather.wind)} km/h</li>
+            </div>{" "}
+          </ul>
+          <div className="currentWeatherIcon">
             <img src={weather.icon} alt="weather icon" />
           </div>
-        </ul>
+        </div>
       )}
     </div>
   );
