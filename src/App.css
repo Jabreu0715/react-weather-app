@@ -22,8 +22,8 @@
 }
 
 .container {
-  background-color: rgb(219, 216, 216);
-  border: 1px solid grey;
+  background-color: rgb(202, 242, 248);
+  border: 1px solid rgb(177, 176, 176);
   border-radius: 10px;
   margin: 40px auto;
   max-width: 680px;
@@ -45,10 +45,15 @@
   display: flex;
   justify-content: space-between;
 }
-.currentWeatherIcon {
+
+.weatherIcon {
+  width: 150px;
   position: relative;
-  top: -80px;
-  right: -120px;
+  top: -120px;
+  right: -150px;
+}
+.forecastTitle {
+  margin-top: -100px;
 }
 .weatherCard {
   background-color: white;
@@ -59,7 +64,15 @@
   padding: 10px;
 }
 .forecastList ul {
+  margin: 0 auto;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .forecastList ul,
+  .forecastTitle {
+    display: none;
+  }
 }

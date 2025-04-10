@@ -22,7 +22,7 @@ export default function SearchEngine() {
   function handleSubmit(event) {
     event.preventDefault();
     let apiKey = "23ftbd4aecd5fa6f4304ea2800dofdbf";
-    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}=metric`;
+    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(url).then(showWeather);
   }
   function updateCity(event) {
@@ -54,11 +54,16 @@ export default function SearchEngine() {
                 <li>Humidity: {weather.humidity}%</li>
                 <li>Wind: {Math.round(weather.wind)} km/h</li>
               </ul>{" "}
-            </div>
-            <div className="currentWeatherIcon">
-              <img src={weather.icon} alt="weather icon" />
+              <span className="currentWeatherIcon">
+                <img
+                  src={weather.icon}
+                  className="weatherIcon"
+                  alt="weather icon"
+                />
+              </span>{" "}
             </div>
           </div>
+          <div className="forecastTitle">FIVE DAY FORECAST</div>
           <div className="forecastList">
             <ul>
               <li>
